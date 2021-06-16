@@ -1,1 +1,249 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway:ital,wght@0,600;0,700;0,800;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #27657f;
+  overflow-x: hidden;
+}
+
+.App {
+  background-color: #27657f;
+  color: white;
+  font-family: "PT Sans", Arial;
+}
+
+.App .Podcast {
+  height: 100vh;
+  width: 100vw;
+}
+
+.App .Podcast .Capa {
+  width: 100vw;
+  height: 45%;
+  background-color: #329ecb;
+  background-image: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.App .Podcast .Capa .PodTitle {
+  font-family: "Raleway", Arial;
+  font-style: italic;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+  text-shadow: 2px 2px 15px #111111;
+}
+
+.App .Podcast .Capa .Ep-Length {
+  font-family: "Raleway", Arial;
+  font-size: 16px;
+  color: #888686;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.App .Podcast .lista-pod {
+  background-color: #27657f;
+  margin-left: 30px;
+  padding-bottom: 10px;
+}
+
+.App .Podcast .lista-pod .eps {
+  text-transform: uppercase;
+  color: #888686;
+  font-family: "PT Sans", Arial;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+  font-size: 13px;
+}
+
+.App .Podcast .lista-pod .ep-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+  width: 85%;
+  padding: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.App .Podcast .lista-pod .ep-box .coverEP {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.App .Podcast .lista-pod .ep-box .coverEP img {
+  width: 190%;
+}
+
+.App .Podcast .lista-pod .ep-box .Info {
+  margin-left: 15px;
+  width: 70%;
+}
+
+.App .Podcast .lista-pod .ep-box:hover {
+  background-color: #329ecb;
+  border-radius: 5px;
+}
+
+.Capa-EP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Capa-EP .btn-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #27657f;
+  border-radius: 50%;
+  padding: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.Capa-EP .btn-close .icon-close {
+  color: white;
+  font-size: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.Capa-EP .btn-close .icon-close:hover {
+  color: #329ecb;
+}
+
+.Capa-EP .btn-close:hover {
+  background-color: white;
+}
+
+.App-EP {
+  background-color: #27657f;
+  color: white;
+  font-family: "PT Sans", Arial;
+  height: 100vh;
+}
+
+.App-EP .pod-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 30px;
+  width: 85%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-family: "PT Sans", Arial;
+}
+
+.App-EP .pod-info .pod-title {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.App-EP .pod-info p {
+  margin-bottom: 20px;
+}
+
+.App-EP .pod-info .participants {
+  font-family: "Raleway", Arial;
+  font-size: 13px;
+  color: #888686;
+}
+
+.App-EP .player {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #15475b;
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+}
+
+.App-EP .player .p-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  font-size: 30px;
+  background-color: white;
+  border: none;
+  margin-right: 9px;
+  border-radius: 50%;
+  color: #329ecb;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.App-EP .player .p-btn:hover {
+  -webkit-box-shadow: 2px 2px 12px black;
+          box-shadow: 2px 2px 12px black;
+}
+
+.App-EP .player .play-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #329ecb;
+  border-radius: 50%;
+  padding: 30px;
+  cursor: pointer;
+  font-size: 28px;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.App-EP .player .play-btn:hover {
+  -webkit-box-shadow: 2px 2px 12px black;
+          box-shadow: 2px 2px 12px black;
+}
+/*# sourceMappingURL=index.css.map */

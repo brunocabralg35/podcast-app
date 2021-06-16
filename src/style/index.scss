@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Raleway:ital,wght@0,600;0,700;0,800;1,700&display=swap");
+
+//Variaveis
+$fonte: "PT Sans", Arial;
+$fonte2: "Raleway", Arial;
+$bg-color: #15475b;
+$bg-color2: #27657f;
+$player-color: #329ecb;
+$font-color: white;
+$font-color2: rgb(136, 134, 134);
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin ml {
+  margin-left: 30px;
+}
+
+body {
+  background-color: $bg-color2;
+  overflow-x: hidden;
+}
+
+.App {
+  background-color: $bg-color2;
+  color: $font-color;
+  font-family: $fonte;
+
+  .Podcast {
+    height: 100vh;
+    width: 100vw;
+    .Capa {
+      width: 100vw;
+      height: 45%;
+      background-color: $player-color;
+      background-image: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .PodTitle {
+        font-family: $fonte2;
+        font-style: italic;
+        font-size: 40px;
+        margin-bottom: 10px;
+        @include ml();
+        text-shadow: 2px 2px 15px #111111;
+      }
+
+      .Ep-Length {
+        font-family: $fonte2;
+        font-size: 16px;
+        color: $font-color2;
+        margin-bottom: 30px;
+        @include ml();
+      }
+    }
+
+    .lista-pod {
+      background-color: $bg-color2;
+      @include ml();
+      padding-bottom: 10px;
+
+      .eps {
+        text-transform: uppercase;
+        color: $font-color2;
+        font-family: $fonte;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        letter-spacing: 5px;
+        font-size: 13px;
+      }
+
+      .ep-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 85%;
+        padding: 5px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        .coverEP {
+          width: 100px;
+          height: 100px;
+          border-radius: 8px;
+          overflow: hidden;
+
+          img {
+            width: 190%;
+          }
+        }
+
+        .Info {
+          margin-left: 15px;
+          width: 70%;
+        }
+
+        &:hover {
+          background-color: $player-color;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+.Capa-EP {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  .btn-close {
+    display: flex;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    background-color: $bg-color2;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.3s ease;
+
+    .icon-close {
+      color: white;
+      font-size: 30px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $player-color;
+      }
+    }
+    &:hover {
+        background-color: white;
+      }
+  }
+}
+
+.App-EP {
+  background-color: $bg-color2;
+  color: $font-color;
+  font-family: $fonte;
+  height: 100vh;
+
+  .pod-info {
+    display: flex;
+    flex-direction: column;
+    @include ml();
+    width: 85%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-family: $fonte;
+
+    .pod-title {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .participants {
+      font-family: $fonte2;
+      font-size: 13px;
+      color: $font-color2;
+    }
+  }
+
+  .player {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color;
+    position: absolute;
+    bottom: 0;
+    height: 20vh;
+
+    .p-btn{
+        display: flex;
+        padding: 10px;
+        font-size: 30px;
+        background-color: white;
+        border: none;
+        margin-right: 9px;
+        border-radius: 50%;
+        color: $player-color;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover{
+            box-shadow: 2px 2px 12px black;
+        }
+    }
+
+    .play-btn{
+        display: flex;
+        border: none;
+        margin: 10px;
+        cursor: pointer;
+        background-color: $player-color;
+        border-radius: 50%;
+        padding: 30px;
+        cursor: pointer;
+        font-size: 28px;
+        color: white;
+        transition: all 0.3s ease;
+       
+        &:hover{
+            box-shadow: 2px 2px 12px black;
+        }
+    }
+  }
+}
