@@ -49,25 +49,29 @@ body {
 .App .Podcast .Capa .Ep-Length {
   font-family: "Raleway", Arial;
   font-size: 16px;
-  color: #888686;
+  color: #444242;
   margin-bottom: 30px;
   margin-left: 30px;
 }
 
 .App .Podcast .lista-pod {
   background-color: #27657f;
-  margin-left: 30px;
   padding-bottom: 10px;
+}
+
+.App .Podcast .lista-pod .englob {
+  margin-left: 30px;
 }
 
 .App .Podcast .lista-pod .eps {
   text-transform: uppercase;
-  color: #888686;
+  color: #444242;
   font-family: "PT Sans", Arial;
   margin-top: 30px;
   margin-bottom: 20px;
   letter-spacing: 5px;
-  font-size: 13px;
+  font-size: 16px;
+  font-weight: bolder;
 }
 
 .App .Podcast .lista-pod .ep-box {
@@ -99,9 +103,14 @@ body {
   width: 190%;
 }
 
-.App .Podcast .lista-pod .ep-box .Info {
+.App .Podcast .lista-pod .ep-box .Info-pod {
   margin-left: 15px;
   width: 70%;
+}
+
+.App .Podcast .lista-pod .ep-box .Info-pod .title-pod {
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 .App .Podcast .lista-pod .ep-box:hover {
@@ -175,6 +184,7 @@ body {
 .App-EP .pod-info .pod-title {
   margin-bottom: 20px;
   font-size: 16px;
+  font-weight: bolder;
 }
 
 .App-EP .pod-info p {
@@ -184,10 +194,21 @@ body {
 .App-EP .pod-info .participants {
   font-family: "Raleway", Arial;
   font-size: 13px;
-  color: #888686;
+  color: #444242;
 }
 
 .App-EP .player {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #15475b;
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+}
+
+.App-EP .player .Buttons {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

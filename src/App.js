@@ -40,6 +40,7 @@ function App() {
           <h3 className="Ep-Length">{episodes.length} episódios</h3>
         </div>
         <div className="lista-pod">
+          <div className="englob">
           <h4 className="eps">Lista de episódios</h4>
           {episodes.map((episode, index) => {
             return (
@@ -49,8 +50,8 @@ function App() {
                 <div className="coverEP">
                   <img src={episode.cover} alt="coverEP" />
                 </div>
-                <div className="Info">
-                  <h3 className="title">
+                <div className="Info-pod">
+                  <h3 className="title-pod">
                     Ep. {episode.episodeNumber} - {episode.name}
                   </h3>
                   <p>
@@ -61,6 +62,8 @@ function App() {
               </div>
             );
           })}
+          </div>
+          
         </div>
       </div>
     </div>
